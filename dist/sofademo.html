@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script type="module" src="/index.182cef57.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Couch Demo </title>
+    <link rel="stylesheet" href="/ai.2c50759b.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.3187a167.png">
+
+ <style>#webgi-canvas {
+  cursor: grab;
+}
+
+#webgi-canvas:active {
+  cursor: grabbing;
+}
+
+ar-button {
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 1rem;
+  display: flex;
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 4px #00000026;
+}
+
+ar-button:before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234a4a4a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3'%3E%3C/path%3E%3C/svg%3E");
+  width: 24px;
+  height: 24px;
+  margin-right: .5rem;
+  display: block;
+}
+
+ar-button:hover {
+  background-color: #f5f5f5;
+}
+
+ar-button:active {
+  background-color: #eee;
+}
+
+ar-button > a, ar-button > a:hover {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+
+</style>
+</head>
+
+<body>
+    
+
+
+    <canvas id="webgi-canvas" class="w-screen h-screen"></canvas>
+
+
+<img src="/logo.08e8d170.png" class="h-16 absolute left-1/2 top-16 translate-x-[-50%]" alt="">
+
+
+<ar-button src="https://cdn.glitch.global/d3604814-c91b-4a08-b633-0908f5a48d9a/sofac.glb?v=1693911609472" ios-src="https://cdn.glitch.global/d3604814-c91b-4a08-b633-0908f5a48d9a/sofa.usdz?v=1693912565995" title="A 3D model of an astronaut">
+  AR
+</ar-button>
+
+
+
+
+
+    <div data-dial-init="" class="fixed right-6 bottom-6 group">
+        <div id="speed-dial-menu-vertical" class="flex flex-col hidden items-center  mb-4 space-y-2">
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class=" bodycolor   flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg " style="background-color: #725b53">
+        
+                
+            </button>
+            <div id="tooltip-share" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Mocha Comfort
+                <div class="tooltip-arrow" data-popper-arrow=""></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share1" data-tooltip-placement="left" class="  bodycolor  flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg " style="background-color: #333">
+        
+                
+            </button>
+            <div id="tooltip-share1" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Slate Serenity
+                <div class="tooltip-arrow" data-popper-arrow=""></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share2" data-tooltip-placement="left" class="  bodycolor  flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg " style="background-color: #556b2f">
+        
+               
+            </button>
+            <div id="tooltip-share2" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Olive Haven
+                <div class="tooltip-arrow" data-popper-arrow=""></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share3" data-tooltip-placement="left" class=" bodycolor   flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg " style="background-color: indigo">
+        
+           
+            </button>
+            <div id="tooltip-share3" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Plum Velvet
+                <div class="tooltip-arrow" data-popper-arrow=""></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share4" data-tooltip-placement="left" class=" bodycolor   flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg " style="background-color: teal">
+        
+                <span class="sr-only">Obsidian Black</span>
+            </button>
+            <div id="tooltip-share4" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Teal Tranquility
+                <div class="tooltip-arrow" data-popper-arrow=""></div>
+            </div>
+
+
+
+
+
+
+
+
+
+            
+        </div>
+
+        <!-- <ar-button
+        src="https://cdn.glitch.global/d3604814-c91b-4a08-b633-0908f5a48d9a/bed_m000-23.glb?v=1693906421891"
+        ios-src="https://cdn.glitch.global/d3604814-c91b-4a08-b633-0908f5a48d9a/gltf-1693921263550-827080480.usdz?v=1693921290981"
+    
+        title="A 3D model of an astronaut">
+          See in Augmented Reality 
+    </ar-button>  -->
+        
+
+    
+
+
+
+
+        <button type="button" data-dial-toggle="speed-dial-menu-vertical" aria-controls="speed-dial-menu-vertical" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+       
+
+            <svg class="w-6 h-6 transition-transform group-hover:rotate-[135deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewbox="0 0 20 20">
+                <path d="m13.835 7.578-.005.007-7.137 7.137 2.139 2.138 7.143-7.142-2.14-2.14Zm-10.696 3.59 2.139 2.14 7.138-7.137.007-.005-2.141-2.141-7.143 7.143Zm1.433 4.261L2 12.852.051 18.684a1 1 0 0 0 1.265 1.264L7.147 18l-2.575-2.571Zm14.249-14.25a4.03 4.03 0 0 0-5.693 0L11.7 2.611 17.389 8.3l1.432-1.432a4.029 4.029 0 0 0 0-5.689Z"></path>
+            </svg>
+            <span class="sr-only">Open actions menu</span>
+        </button>
+    </div>
+    
+
+
+
+
+    <div class="flex items-center fixed right-24 bottom-10">
+        <input checked="" id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="checked-checkbox" class="ml-2 text-xl font-semibold  text-gray-900 dark:text-gray-300">Auto Rotate</label>
+    </div>
+
+
+
+
+
+
+    <script type="module">var $parcel$global =
+typeof globalThis !== 'undefined'
+  ? globalThis
+  : typeof self !== 'undefined'
+  ? self
+  : typeof window !== 'undefined'
+  ? window
+  : typeof global !== 'undefined'
+  ? global
+  : {};
+var $parcel$modules = {};
+var $parcel$inits = {};
+
+var parcelRequire = $parcel$global["parcelRequirebd24"];
+if (parcelRequire == null) {
+  parcelRequire = function(id) {
+    if (id in $parcel$modules) {
+      return $parcel$modules[id].exports;
+    }
+    if (id in $parcel$inits) {
+      var init = $parcel$inits[id];
+      delete $parcel$inits[id];
+      var module = {id: id, exports: {}};
+      $parcel$modules[id] = module;
+      init.call(module.exports, module, module.exports);
+      return module.exports;
+    }
+    var err = new Error("Cannot find module '" + id + "'");
+    err.code = 'MODULE_NOT_FOUND';
+    throw err;
+  };
+
+  parcelRequire.register = function register(id, init) {
+    $parcel$inits[id] = init;
+  };
+
+  $parcel$global["parcelRequirebd24"] = parcelRequire;
+}
+// constants to check for various platforms / AR subsytems support
+// @see https://github.com/google/model-viewer/blob/master/packages/model-viewer/src/constants.ts
+const $cd961edb12aaa3b7$export$cdeeadabd3d03734 = {
+    IS_MOBILE: (()=>{
+        const userAgent = navigator.userAgent || navigator.vendor || opera;
+        let check = false;
+        if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(userAgent) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(userAgent.substr(0, 4))) check = true;
+        return check;
+    })(),
+    IS_ANDROID: /android/i.test(navigator.userAgent),
+    // Prior to iOS 13, detecting iOS Safari was relatively straight-forward.
+    // As of iOS 13, Safari on iPad (in its default configuration) reports the same
+    // user-agent string as Safari on desktop MacOS. Strictly speaking, we only care
+    // about iOS for the purposes if selecting for cases where Quick Look is known
+    // to be supported. However, for API correctness purposes, we must rely on
+    // known, detectable signals to distinguish iOS Safari from MacOS Safari. At the
+    // time of this writing, there are no non-iOS/iPadOS Apple devices with
+    // multi-touch displays.
+    // @see https://stackoverflow.com/questions/57765958/how-to-detect-ipad-and-ipad-os-version-in-ios-13-and-up
+    // @see https://forums.developer.apple.com/thread/119186
+    // @see https://github.com/google/model-viewer/issues/758
+    IS_IOS: /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream || navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1,
+    IS_AR_QUICKLOOK_CANDIDATE: (()=>{
+        const tempAnchor = document.createElement("a");
+        return Boolean(tempAnchor.relList && tempAnchor.relList.supports && tempAnchor.relList.supports("ar"));
+    })(),
+    IS_SCENEVIEWER_CANDIDATE: /android/i.test(navigator.userAgent) && !/firefox/i.test(navigator.userAgent) && !/OculusBrowser/.test(navigator.userAgent)
+};
+const $cd961edb12aaa3b7$export$4635587130eb94f9 = (props, listener)=>{
+    const anchor = document.createElement("a");
+    const href = $cd961edb12aaa3b7$var$setupHref(props);
+    anchor.setAttribute("href", href);
+    anchor.style.display = "none";
+    if ($cd961edb12aaa3b7$export$cdeeadabd3d03734.IS_AR_QUICKLOOK_CANDIDATE) {
+        // quick look needs a <img> child to go directly to AR view
+        anchor.appendChild(document.createElement("img"));
+        anchor.rel = "ar";
+    }
+    if (listener && $cd961edb12aaa3b7$export$cdeeadabd3d03734.IS_AR_QUICKLOOK_CANDIDATE) {
+        // anchor needs to be added to the body before you can add an event listener
+        document.body.append(anchor);
+        anchor.addEventListener("message", (event)=>{
+            if (event.data == "_apple_ar_quicklook_button_tapped") listener.dispatchEvent(new CustomEvent("quick-look-button-tapped"));
+        }, false);
+    }
+    anchor.click();
+};
+const $cd961edb12aaa3b7$var$setupHref = (props)=>{
+    let href = "";
+    if ($cd961edb12aaa3b7$export$cdeeadabd3d03734.IS_AR_QUICKLOOK_CANDIDATE) {
+        const { iosSrc: iosSrc, applePayButtonType: applePayButtonType, checkoutTitle: checkoutTitle, checkoutSubtitle: checkoutSubtitle, price: price, callToAction: callToAction, customBanner: customBanner, customHeight: customHeight, noScale: noScale } = props;
+        href = `${iosSrc}#`;
+        if (applePayButtonType) href += `&applePayButtonType=${encodeURIComponent(applePayButtonType)}`;
+        if (checkoutTitle) href += `&checkoutTitle=${encodeURIComponent(checkoutTitle)}`;
+        if (checkoutSubtitle) href += `&checkoutSubtitle=${encodeURIComponent(checkoutSubtitle)}`;
+        if (price) href += `&price=${encodeURIComponent(price)}`;
+        if (callToAction) href += `&callToAction=${encodeURIComponent(callToAction)}`;
+        if (customBanner) href += `&custom=${encodeURIComponent(customBanner)}`;
+        if (customHeight) href += `&customHeight=${encodeURIComponent(customHeight)}`;
+        if (noScale != null) href += `&allowsContentScaling=0`;
+    } else if ($cd961edb12aaa3b7$export$cdeeadabd3d03734.IS_SCENEVIEWER_CANDIDATE) {
+        const { src: src, title: title, fallbackUrl: fallbackUrl, link: link, noScale: noScale } = props;
+        href = `intent://arvr.google.com/scene-viewer/1.0?file=${src}&mode=ar_only`;
+        if (title) href += `&title=${encodeURIComponent(title)}`;
+        if (link) href += `&link=${encodeURIComponent(link)}`;
+        if (noScale != null) href += `&resizable=false`;
+        href += `#Intent;scheme=https;` + `package=com.google.ar.core;` + `action=android.intent.action.VIEW;`;
+        if (fallbackUrl) href += `S.browser_fallback_url=${encodeURIComponent(fallbackUrl)};`;
+        href += `end;`;
+    }
+    return href;
+};
+const $cd961edb12aaa3b7$export$56410a09e6c2c700 = (button)=>{
+    // skip button if it was already initialized beforehand
+    if (button.getAttribute("ar") != null) return;
+    if ($cd961edb12aaa3b7$export$cdeeadabd3d03734.IS_AR_QUICKLOOK_CANDIDATE) {
+        // system supports AR via quick look (on ios this takes precedence on scene viewer)
+        button.setAttribute("ar", "quick-look");
+        button.dispatchEvent(new CustomEvent("initialized", {
+            detail: "quick-look"
+        }));
+        button.addEventListener("click", ()=>{
+            const iosSrc = button.getAttribute("ios-src");
+            if (!iosSrc) {
+                console.error("Invalid ios-src in <ar-button>: " + button);
+                return;
+            }
+            const applePayButtonType = button.getAttribute("applepay-button-type");
+            const checkoutTitle = button.getAttribute("checkout-title");
+            const checkoutSubtitle = button.getAttribute("checkout-subtitle");
+            const price = button.getAttribute("price");
+            const callToAction = button.getAttribute("call-to-action");
+            const customBanner = button.getAttribute("custom-banner");
+            const customHeight = button.getAttribute("custom-height");
+            const noScale = button.getAttribute("no-scale");
+            $cd961edb12aaa3b7$export$4635587130eb94f9({
+                iosSrc: iosSrc,
+                applePayButtonType: applePayButtonType,
+                checkoutTitle: checkoutTitle,
+                checkoutSubtitle: checkoutSubtitle,
+                price: price,
+                callToAction: callToAction,
+                customBanner: customBanner,
+                customHeight: customHeight,
+                noScale: noScale
+            }, button);
+        });
+    } else if ($cd961edb12aaa3b7$export$cdeeadabd3d03734.IS_SCENEVIEWER_CANDIDATE) {
+        // system supports AR via scene viewer
+        button.setAttribute("ar", "scene-viewer");
+        button.dispatchEvent(new CustomEvent("initialized", {
+            detail: "scene-viewer"
+        }));
+        button.addEventListener("click", ()=>{
+            const src = button.getAttribute("src");
+            if (!src) {
+                console.error("Invalid src in <ar-button>: " + button);
+                return;
+            }
+            const title = button.getAttribute("title");
+            const fallbackUrl = button.getAttribute("fallback-url");
+            const link = button.getAttribute("link");
+            const noScale = button.getAttribute("no-scale");
+            $cd961edb12aaa3b7$export$4635587130eb94f9({
+                src: src,
+                title: title,
+                fallbackUrl: fallbackUrl,
+                link: link,
+                noScale: noScale
+            });
+        });
+    } else {
+        // No AR supported on current system, hide the button or sets a fallback url
+        button.setAttribute("ar", "unsupported");
+        button.dispatchEvent(new CustomEvent("initialized", {
+            detail: "unsupported"
+        }));
+        if (button.getAttribute("show-if-unsupported") != null) button.addEventListener("click", ()=>{
+            const fallbackUrl = button.getAttribute("fallback-url");
+            if (fallbackUrl) $cd961edb12aaa3b7$export$4635587130eb94f9({
+                fallbackUrl: encodeURIComponent(fallbackUrl)
+            });
+        });
+        else button.style.display = "none";
+    }
+};
+// go through all ar-button tags on the page and initialize them
+const $cd961edb12aaa3b7$var$buttons = document.querySelectorAll("ar-button");
+for(let i = 0; i < $cd961edb12aaa3b7$var$buttons.length; i++){
+    const button = $cd961edb12aaa3b7$var$buttons.item(i);
+    $cd961edb12aaa3b7$export$56410a09e6c2c700(button);
+}
+
+
+
+var $5qRoW = parcelRequire("5qRoW");
+var $f75ca198a87117cb$exports = {};
+$f75ca198a87117cb$exports = new URL("sofac.123577fe.glb", import.meta.url).toString();
+
+
+async function $74c7a6836d60ac33$var$setupViewer() {
+    // Initialize the viewer
+    const viewer = new (0, $5qRoW.ViewerApp)({
+        canvas: document.getElementById("webgi-canvas")
+    });
+    // Add some plugins
+    const manager = await viewer.addPlugin((0, $5qRoW.AssetManagerPlugin));
+    // Add a popup(in HTML) with download progress when any asset is downloading.
+    await viewer.addPlugin((0, $5qRoW.AssetManagerBasicPopupPlugin));
+    // Add plugins individually.
+    // await viewer.addPlugin(GBufferPlugin)
+    // await viewer.addPlugin(new ProgressivePlugin(32))
+    // await viewer.addPlugin(new TonemapPlugin(!viewer.useRgbm))
+    // await viewer.addPlugin(GammaCorrectionPlugin)
+    // await viewer.addPlugin(SSRPlugin)
+    // await viewer.addPlugin(SSAOPlugin)
+    // await viewer.addPlugin(DiamondPlugin)
+    // await viewer.addPlugin(FrameFadePlugin)
+    // await viewer.addPlugin(GLTFAnimationPlugin)
+    // await viewer.addPlugin(GroundPlugin)
+    // await viewer.addPlugin(BloomPlugin)
+    // await viewer.addPlugin(TemporalAAPlugin)
+    // await viewer.addPlugin(AnisotropyPlugin)
+    // and many more...
+    // or use this to add all main ones at once.
+    await (0, $5qRoW.addBasePlugins)(viewer);
+    // Add more plugins not available in base, like CanvasSnipperPlugin which has helpers to download an image of the canvas.
+    await viewer.addPlugin((0, $5qRoW.CanvasSnipperPlugin));
+    // This must be called once after all plugins are added.
+    viewer.renderer.refreshPipeline();
+    let url = new URL($f75ca198a87117cb$exports);
+    url = "" + url;
+    const model = await viewer.load(url);
+    const object3d = model.modelObject;
+    const Colors = document.querySelectorAll(".bodycolor");
+    const object = viewer.scene.findObjectsByName("Object_2")[0].modelObject;
+    // console.log(object)
+    let obj = viewer.createPhysicalMaterial({
+        color: 0x725B53,
+        roughness: 0.4,
+        matalness: 0.6
+    });
+    object.setMaterial(obj);
+    for (const color of Colors)color.addEventListener("click", (e)=>{
+        const backgroundColor = window.getComputedStyle(color).backgroundColor;
+        // console.log(object, backgroundColor);
+        // console.log(startMaterial)
+        obj = viewer.createPhysicalMaterial({
+            color: backgroundColor.toString(),
+            roughness: 0.4,
+            matalness: 0.6
+        });
+        object.setMaterial(obj);
+        console.log(object.material);
+    });
+    // Function to adjust the object's properties based on screen width
+    // Initial adjustment
+    // adjustObjectProperties();
+    // Listen for window resize events and adjust object properties accordingly
+    // window.addEventListener('resize', adjustObjectProperties);
+    //   Camera 
+    const controls = viewer.scene.activeCamera.controls;
+    controls.maxDistance = 20;
+    controls.autoRotate = true;
+    const rotateCheckbox = document.getElementById("checked-checkbox"); // Make sure to replace "rotateCheckbox" with your actual element ID.
+    rotateCheckbox.addEventListener("input", (e)=>{
+        if (rotateCheckbox.checked) controls.autoRotate = true;
+        else controls.autoRotate = false;
+        console.log("INPUT");
+    });
+    function update() {
+        window.requestAnimationFrame(update);
+        viewer.setDirty();
+    }
+    update();
+}
+$74c7a6836d60ac33$var$setupViewer();
+
+
+</script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+</html>
